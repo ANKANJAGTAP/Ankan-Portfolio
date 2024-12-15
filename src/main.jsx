@@ -1,10 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from'react-router-dom'
+import './index.css';
+import App from './App';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+const rootElement = document.getElementById('root');
+
+if (rootElement) {
+  createRoot(rootElement).render(
+    <StrictMode>
+      <BrowserRouter>
     <App />
-  </StrictMode>,
-)
+    </BrowserRouter>
+    </StrictMode>,
+  );
+} else {
+  console.error("Root element not found. Ensure there is a 'root' div in your HTML.");
+}

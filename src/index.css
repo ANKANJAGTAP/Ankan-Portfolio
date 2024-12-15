@@ -3,7 +3,25 @@
 @tailwind utilities;
 
 
- .fontfamily { 
-  font-family:
+*{  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #272424; /* Background of the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #926b6b; /* Color of the thumb */
+    border-radius: 6px; /* Round corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovered */
+  }
  
