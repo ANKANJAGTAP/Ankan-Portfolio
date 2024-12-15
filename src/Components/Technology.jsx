@@ -56,7 +56,7 @@ function Technology() {
      const click=()=>{alert("Chal raha ha")}
   return (
     <div>
-     <h1 className="mt-[3%] ml-[40%] mr-[40%] text-center text-4xl font-bold  py-4 px-4 rounded-full  hover:text-fuchsia-400 cursor-pointer duration-200 border-b-2 border-underline border-fuchsia-400 hover:bg-gradient-to-r from-gray-800 via-black to-gray-900 hover:scale-105 hover:shadow-xl transition-transform duration-300 ...  ">Technologies</h1>
+     <h1 className="mt-[1%] ml-[40%] mr-[40%] text-center text-4xl font-bold  py-4 px-4 rounded-full  hover:text-fuchsia-400 cursor-pointer duration-200 border-b-2 border-underline border-fuchsia-400 hover:bg-gradient-to-r from-gray-800 via-black to-gray-900 hover:scale-105 hover:shadow-xl transition-transform duration-300 ...  ">Technologies</h1>
      <div className='ml-[10%] mr-[10%] mt-[4%] mb-[10%] overflow-y-scroll w-auto h-screen'>
     <div className='w-full h-full flex flex-row gap-10 justify-center flex flex-wrap'>
         {data.map((elem,index)=>(<div key="index"className='w-60 song px-3 py-2 bg-gradient-to-r from-[#1D2671] to-[#C33764] text-white p-5 rounded-lg shadow-lg hover:scale-105 transition-transform'>
