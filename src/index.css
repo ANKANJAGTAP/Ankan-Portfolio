@@ -9,41 +9,71 @@
     box-sizing: border-box;
 }
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 0px; 
   }
   
   ::-webkit-scrollbar-track {
-    background: #272424; /* Background of the track */
+    background: #272424; 
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #926b6b; /* Color of the thumb */
-    border-radius: 6px; /* Round corners */
+    background: #926b6b; 
+    border-radius: 6px; 
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color when hovered */
+    background: #555;
   }
+  @media (max-width: 768px) {
+    .no-scrollbar {
+        overflow: hidden;
+    }
+}
 
 
-  .glow-container {
-    animation: text-glow 3s infinite alternate;
-  }
-  
   .glowing-gradient {
-    animation: gradient-shift 5s infinite linear;
+    animation: gradient-shift 6s infinite linear;
   }
   
-  .typewriter-text {
-    animation: glow 2s infinite alternate;
+  .underline-decoration {
+    position: relative;
+    transition: color 0.3s ease;
   }
   
-  @keyframes text-glow {
+  .underline-decoration:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    animation: underline-slide 1s ease-in-out infinite;
+  }
+  
+  @keyframes underline-slide {
     0% {
-      text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+      width: 0;
     }
     100% {
-      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+      width: 100%;
+    }
+  }
+  
+  .animate-underline {
+    animation: underline-glow 2s infinite alternate;
+  }
+  
+  @keyframes underline-glow {
+    0% {
+      opacity: 0.7;
+      text-shadow: 0 0 2px rgba(255, 0, 255, 0.6), 
+                   0 0 4px rgba(0, 255, 255, 0.6);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 4px rgba(255, 0, 255, 0.4), 
+                   0 0 6px rgba(0, 255, 255, 0.4);
     }
   }
   
@@ -58,14 +88,50 @@
       background-position: 0% 50%;
     }
   }
+  .color-changing-underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff0000, #ff7300, #ffea00, #47ff00, #00ffee, #2c00ff, #ff00ee);
+    background-size: 400% 400%;
+    animation: color-shift 6s infinite ease-in-out;
+  }
   
-  @keyframes glow {
+  @keyframes color-shift {
     0% {
-      text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
     }
     100% {
-      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 50px #00ffff;
+      background-position: 0% 50%;
     }
   }
+  
+  .glowing-gradient {
+    animation: gradient-shift 6s infinite linear;
+  }
+  
+  .typewriter-text {
+    position: relative;
+    display: inline-block;
+  }
+  
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+    
+  
   
  

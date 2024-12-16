@@ -3,8 +3,9 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Home from '../Components/Home';
 import About from '../Components/About';
-import Technology from '../Components/Technology';
+import Technology from '../Components/Technologies';
 import Projects from '../Components/Projects';
+import ContactMe from '../Components/ContactMe';
 import Error from '../Components/Error';
 
 function Routing() {
@@ -31,7 +32,7 @@ function Routing() {
           element={
             <motion.div
               initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}Technology
               exit={{ opacity: 0, y: 100 }}
               transition={{ duration: 0.5 }}
             >
@@ -40,7 +41,7 @@ function Routing() {
           }
         />
         <Route
-          path="/technology"
+          path="/Technologies"
           element={
             <motion.div
               initial={{ opacity: 0, y: -100 }}
@@ -62,6 +63,19 @@ function Routing() {
               transition={{ duration: 0.5 }}
             >
               <Projects />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/ContactMe"
+          element={
+            <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 100 }}
+              transition={{ duration: 0.5 }}
+            >
+              <ContactMe />
             </motion.div>
           }
         />
