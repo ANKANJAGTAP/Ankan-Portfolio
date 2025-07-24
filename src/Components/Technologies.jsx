@@ -52,18 +52,6 @@ function Technologies() {
       page: "https://devdocs.io/cpp/",
     },
     {
-      title: "GO Lang",
-      artist: " Currently learning; interested in its efficiency and scalability for backend development and modern cloud applications.",
-      image: "./Pictures/go.png",
-      page: "https://go.dev/doc/",
-    },
-    {
-      title: "Python",
-      artist: " Strong understanding of Python basics, algorithms, and its application in data analysis, AI, and scripting tasks.",
-      image: "./Pictures/python.png",
-      page: "https://docs.python.org/3/",
-    },
-    {
       title: "Docker",
       artist: "Exploring containerization concepts; interested in deploying and managing applications efficiently using Docker for scalability and portability.",
       image: "./Pictures/docker.png",
